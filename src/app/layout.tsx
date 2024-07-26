@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en" className={`${GeistSans.variable}`}>
       <body className="dark"> {/* Add padding-top to account for fixed header */}
         <header className="fixed top-0 left-0 right-0 z-50 bg-background"> {/* Add fixed positioning */}
-          <NavigationMenuDemo className="flex items-center justify-between w-full p-6 text-xl font-semibold border-b"/>
+          <NavigationMenuDemo/>
         </header>
         {children}
       </body>

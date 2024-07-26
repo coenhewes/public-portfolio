@@ -1,7 +1,7 @@
 import "~/styles/globals.css";
-
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
+import { NavigationMenuDemo } from "./_components/topnav.tsx"
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -14,7 +14,12 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body>{children}</body>
+      <body className="dark"> {/* Add padding-top to account for fixed header */}
+        <header className="fixed top-0 left-0 right-0 z-50 bg-background"> {/* Add fixed positioning */}
+          <NavigationMenuDemo className="flex items-center justify-between w-full p-6 text-xl font-semibold border-b"/>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }

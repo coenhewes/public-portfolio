@@ -64,7 +64,7 @@ export function NavigationMenuDemo() {
                 </NavigationMenuLink>
               </li>
               <ListItem href="/docs" title="Software Development">
-                Turing ideas into projects.
+                Turing ideas into reality.
               </ListItem>
               <ListItem href="/docs/installation" title="Revenue Operations">
                 I help start ups build and scale their revenue function. Everything from self-serve to Sales-led. 
@@ -81,6 +81,8 @@ export function NavigationMenuDemo() {
                   key={component.title}
                   title={component.title}
                   href={component.href}
+                  rel="noopener noreferrer" 
+                  target="_blank"
                 >
                   {component.description}
                 </ListItem>

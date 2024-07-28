@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 
 export default function HomePage() {
@@ -7,7 +6,7 @@ export default function HomePage() {
       <div className="flex flex-col items-center mb-8"> {/* Add margin-bottom to separate from images */}
         <h1 className="font-bold text-3xl mb-4">Hi, my name is Coen</h1>
         <p className="text-center max-w-md">
-          I am a full-stack software engineer and revenue operations professional.
+          I am a full-stack deveoper and revenue operations professional.
         </p>
       </div>
       <div className="flex flex-wrap gap-4 justify-center"> {/* Added flex-wrap and gap */}

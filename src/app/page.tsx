@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Button } from "../components/ui/button"
 
 export default function HomePage() {
   return (
@@ -9,6 +10,12 @@ export default function HomePage() {
           I am a full-stack deveoper and revenue operations professional.
         </p>
       </div>
+      <div>
+        <Button>
+          <Link href="https://utfs.io/f/e7eb4d50-1972-4933-b598-cb882fe8e31b-ovu7ts.pdf">Download Resume</Link>
+        </Button>
+      </div>
+      <br />
       <div className="flex flex-wrap gap-4 justify-center"> {/* Added flex-wrap and gap */}
         <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python" />
         <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript" />

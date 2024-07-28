@@ -34,7 +34,7 @@ const components: { title: string; href: string; description: string }[] = [
   },
   {
     title: "T3 Gallery",
-    href: "https://t3gallery-sigma-lilac.vercel.app/",
+    href: "https://github.com/coenhewes/t3gallery",
     description: "A simple image uploader and gallery webapp",
   }
 ]

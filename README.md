@@ -1,29 +1,63 @@
-# Create T3 App
+# My Developer Portfolio
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This is my personal developer portfolio, showcasing my projects and skills. It's built using modern web technologies to demonstrate my proficiency in current development practices.
 
-## What's next? How do I make an app with this?
+## Tech Stack
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+- [Create T3 App](https://create.t3.gg/) - The foundation of the project
+- [Next.js](https://nextjs.org/) - React framework for production
+- [TypeScript](https://www.typescriptlang.org/) - Strongly typed programming language that builds on JavaScript
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [shadcn/ui](https://ui.shadcn.com/) - Re-usable components built with Radix UI and Tailwind CSS
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Features
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+- Responsive design
+- Project showcase
+- Skills section 
+- Contact form (Under Contstruction)
+- Blog (Under Contstruction)
 
-## Learn More
+## Projects Highlighted
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+1. Playlistify - Spotify playlist builder web app
+2. Silly Fortune Teller - JavaScript message generator
+3. AlwaysLander - Email verification tool for sales teams
+4. Logbook Forge - Gym Logbook Ecommerce web app
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
+## Getting Started
 
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
+To run this project locally:
 
-## How do I deploy this?
+1. Clone the repository:
+git clone https://github.com/coenhewes/public-portfolio.git
+Copy
+2. Navigate to the project directory:
+cd portfolio
+Copy
+3. Install dependencies:
+npm install
+Copy
+4. Start the development server:
+npm run dev
+Copy
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+## Learning Resources
+
+- [Create T3 App Documentation](https://create.t3.gg/)
+- [shadcn/ui Documentation](https://ui.shadcn.com/)
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+
+## Contact
+
+Coen Hewes - coenhewes@proton.me
+
+Project Link: [https://github.com/coenhewes/public-portfolio](https://github.com/coenhewes/public-portfolio)
+
+## Acknowledgments
+
+- Create T3 App for the excellent project structure
+- shadcn for the beautiful and accessible UI components
+- All open-source contributors whose work made this portfolio possible

@@ -34,7 +34,7 @@ const components: { title: string; href: string; description: string }[] = [
   },
   {
     title: "T3 Gallery",
-    href: "https://github.com/coenhewes/t3gallery",
+    href: "",
     description: "A simple image uploader and gallery webapp",
   }
 ]
@@ -63,10 +63,10 @@ export function NavigationMenuDemo() {
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="Software Development">
+              <ListItem href="/dev" title="Software Development">
                 Turing ideas into reality.
               </ListItem>
-              <ListItem href="/docs/installation" title="Revenue Operations">
+              <ListItem href="/revops" title="Revenue Operations">
                 I help start ups build and scale their revenue function. Everything from self-serve to Sales-led. 
               </ListItem>
                           </ul>
@@ -97,6 +97,14 @@ export function NavigationMenuDemo() {
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
+ <NavigationMenuItem>
+          <Link href="https://github.com/coenhewes/" legacyBehavior passHref>
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Github
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
+
       </NavigationMenuList>
     </NavigationMenu>
   )

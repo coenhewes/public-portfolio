@@ -10,12 +10,11 @@ export default function HomePage() {
           I am a full-stack deveoper and revenue operations professional.
         </p>
       </div>
-      <div className="flex flex-wrap gap-4 justify-center mb-8">
+     <div className="flex flex-wrap gap-4 justify-center mb-8">
         <Button>
           <Link href="https://utfs.io/f/e7eb4d50-1972-4933-b598-cb882fe8e31b-ovu7ts.pdf">Download Resume</Link>
         </Button>
-      </div>
-      <div className="flex flex-wrap gap-4 justify-center"> {/* Added flex-wrap and gap */}
+      </div>      <div className="flex flex-wrap gap-4 justify-center"> {/* Added flex-wrap and gap */}
         <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python" />
         <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript" />
         <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />

@@ -1,14 +1,13 @@
-
 import Link from "next/link";
 import { Button } from "~/components/ui/button"
 
-export default function HomePage() {
+export default function DevelopmentPage() {
   return (
     <main className="flex flex-col justify-center items-center min-h-screen pt-16">
       <div className="flex flex-col mb-8">
         <h1 className="font-bold text-3xl mb-4">Software Development</h1>
         <div>
-          <p className="text-left">I specialize in building modern, efficient applications using:</p>
+          <p>I specialize in building modern, efficient applications using:</p>
         </div>
         <div>
           <ul className="list-disc text-left mt-4">

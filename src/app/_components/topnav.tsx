@@ -31,6 +31,11 @@ const components: { title: string; href: string; description: string }[] = [
     title: "AlwaysLander",
     href: "https://www.alwayslander.com",
     description: "A email verification tool for sales teams.",
+  },
+  {
+    title: "Portfolio",
+    href: "https://github.com/coenhewes/public-portfolio/",
+    description: "My personal portfolio.",
   }
   ]
 

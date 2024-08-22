@@ -17,10 +17,10 @@ import {
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Logbook Forge",
-    href: "https://logbookforge.vercel.app/",
+    title: "AI Headshots",
+    href: "https://ai-headshots-delta.vercel.app/",
     description:
-      "A custom e-commerce app written in Nextjs.",
+      "Uses an AI model to generate professional headshots from your photos.",
   },
   {
     title: "Playlistify",
@@ -31,13 +31,8 @@ const components: { title: string; href: string; description: string }[] = [
     title: "AlwaysLander",
     href: "https://www.alwayslander.com",
     description: "A email verification tool for sales teams.",
-  },
-  {
-    title: "T3 Gallery",
-    href: "",
-    description: "A simple image uploader and gallery webapp",
   }
-]
+  ]
 
 export function NavigationMenuDemo() {
   return (
@@ -91,7 +86,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="mailto:coenhewes@proton.me" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Contact Me
             </NavigationMenuLink>

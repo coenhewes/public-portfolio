@@ -14,9 +14,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body className="dark"> {/* Add padding-top to account for fixed header */}
-        <header className="fixed top-0 left-0 right-0 z-50 bg-background"> {/* Add fixed positioning */}
-          <NavigationMenuDemo/>
+      <body className="dark">
+        <header className="fixed left-0 right-0 top-0 z-50 flex justify-center border-b border-border/40 bg-background/80 backdrop-blur">
+          <NavigationMenuDemo />
         </header>
         {children}
       </body>

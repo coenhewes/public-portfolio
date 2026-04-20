@@ -5,6 +5,7 @@ import Link from "next/link"
 
 import { cn } from "../../lib/utils"
 import { Icons } from "../../components/icons"
+import { projects } from "../../data/projects"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -14,30 +15,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "../../components/ui/navigation-menu"
-
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "AI Headshots",
-    href: "https://ai-headshots-delta.vercel.app/",
-    description:
-      "Uses an AI model to generate professional headshots from your photos.",
-  },
-  {
-    title: "Playlistify",
-    href: "https://github.com/coenhewes/playlistify",
-    description: "A Spotify playlist generator.",
-  },
-  {
-    title: "AlwaysLander",
-    href: "https://www.alwayslander.com",
-    description: "A email verification tool for sales teams.",
-  },
-  {
-    title: "Portfolio",
-    href: "https://github.com/coenhewes/public-portfolio/",
-    description: "My personal portfolio.",
-  }
-  ]
 
 export function NavigationMenuDemo() {
   return (
@@ -64,7 +41,7 @@ export function NavigationMenuDemo() {
                 </NavigationMenuLink>
               </li>
               <ListItem href="/dev" title="Software Development">
-                Turing ideas into reality.
+                Turning ideas into reality.
               </ListItem>
               <ListItem href="/revops" title="Revenue Operations">
                 I help start ups build and scale their revenue function. Everything from self-serve to Sales-led. 
@@ -76,15 +53,15 @@ export function NavigationMenuDemo() {
           <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
-              {components.map((component) => (
+              {projects.map((project) => (
                 <ListItem
-                  key={component.title}
-                  title={component.title}
-                  href={component.href}
-                  rel="noopener noreferrer" 
+                  key={project.title}
+                  title={project.title}
+                  href={project.href}
+                  rel="noopener noreferrer"
                   target="_blank"
                 >
-                  {component.description}
+                  {project.tagline}
                 </ListItem>
               ))}
             </ul>

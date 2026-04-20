@@ -86,10 +86,19 @@ export const projects: Project[] = [
     title: "Forge Logbooks",
     href: "https://forgelogbooks.com/",
     repo: "https://github.com/coenhewes/logbookforgeprod",
-    tagline: "Custom physical logbooks for serious lifters.",
+    tagline: "Print-on-demand training logbooks for serious lifters.",
     description:
-      "Program-specific paper logbooks that let lifters train phone-free and surface the data that actually drives progress. Ships in 72 hours with a PDF backup.",
-    stack: ["Next.js", "Stripe", "Tailwind", "Print fulfillment"],
+      "A full storefront for custom, program-specific paper logbooks — catalogue, customiser, Stripe checkout, Lulu print pipeline with generated PDFs, customer dashboard, admin tooling, and an SEO blog with scheduled publishing. Built to let lifters train phone-free.",
+    stack: [
+      "Next.js 14",
+      "Supabase",
+      "Stripe",
+      "Lulu Print API",
+      "pdf-lib",
+      "UploadThing",
+      "Resend",
+      "Klaviyo",
+    ],
   },
   {
     title: "Forge Blog",

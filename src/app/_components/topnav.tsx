@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Link from "next/link"
+import * as React from "react";
+import Link from "next/link";
 
-import { cn } from "../../lib/utils"
-import { Icons } from "../../components/icons"
-import { projects } from "../../data/projects"
+import { cn } from "../../lib/utils";
+import { Icons } from "../../components/icons";
+import { projects } from "../../data/projects";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -14,7 +14,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
-} from "../../components/ui/navigation-menu"
+} from "../../components/ui/navigation-menu";
 
 export function NavigationMenuDemo() {
   return (
@@ -35,7 +35,8 @@ export function NavigationMenuDemo() {
                       Coen Hewes
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
-                     I am a full-stack developer and Revenue Operations professional. 
+                      I build AI-powered applications, SaaS platforms, and
+                      technical systems.
                     </p>
                   </a>
                 </NavigationMenuLink>
@@ -43,16 +44,13 @@ export function NavigationMenuDemo() {
               <ListItem href="/dev" title="Software Development">
                 Turning ideas into reality.
               </ListItem>
-              <ListItem href="/revops" title="Revenue Operations">
-                I help start ups build and scale their revenue function. Everything from self-serve to Sales-led. 
-              </ListItem>
-                          </ul>
+            </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Projects</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
               {projects.map((project) => (
                 <ListItem
                   key={project.title}
@@ -68,23 +66,22 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="mailto:coenhewes@proton.me" legacyBehavior passHref>
+          <Link href="mailto:coenhewes@outlook.com" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Contact Me
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
- <NavigationMenuItem>
+        <NavigationMenuItem>
           <Link href="https://github.com/coenhewes/" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Github
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
-
       </NavigationMenuList>
     </NavigationMenu>
-  )
+  );
 }
 
 const ListItem = React.forwardRef<
@@ -98,7 +95,7 @@ const ListItem = React.forwardRef<
           ref={ref}
           className={cn(
             "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-            className
+            className,
           )}
           {...props}
         >
@@ -109,6 +106,6 @@ const ListItem = React.forwardRef<
         </a>
       </NavigationMenuLink>
     </li>
-  )
-})
-ListItem.displayName = "ListItem"
+  );
+});
+ListItem.displayName = "ListItem";

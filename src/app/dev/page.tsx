@@ -2,7 +2,7 @@ const specialties = [
   {
     title: "Python",
     description:
-      "Backend services, data pipelines, and the real-time audio/LLM stack powering Cornerman and Parallax.",
+      "FastAPI services, WebSocket backends, data workflows, and the real-time audio/LLM stack behind Cornerman and Parallax.",
   },
   {
     title: "TypeScript",
@@ -12,7 +12,7 @@ const specialties = [
   {
     title: "React & Next.js",
     description:
-      "App Router, server components, and streaming UIs for production webapps.",
+      "App Router, server components, dashboards, storefronts, documentation shells, and agent-ready blog templates.",
   },
   {
     title: "Tailwind CSS",
@@ -22,21 +22,22 @@ const specialties = [
   {
     title: "SQL & Postgres",
     description:
-      "Schema design, analytical queries, and keeping the data layer honest.",
+      "Schema design, Supabase/Postgres persistence, analytics queries, and operational data models.",
   },
   {
     title: "AI & LLMs",
     description:
-      "Real-time transcription, streaming inference, RAG, and agent skill layers.",
+      "Deepgram transcription, MiniMax/Qwen integrations, Vercel AI workflows, retrieval, and agent skill layers.",
   },
   {
-    title: "DevOps",
+    title: "Cloud & Deployments",
     description:
-      "Vercel, GitHub Actions, cron-based deploys, and pragmatic observability.",
+      "Vercel, Render, GitHub Actions, scheduled deploys, webhooks, and pragmatic observability.",
   },
   {
-    title: "Git",
-    description: "Version control, code review, and collaboration discipline.",
+    title: "Product Architecture",
+    description:
+      "Turning messy user workflows into shipped SaaS surfaces, admin tooling, billing, auth, and support systems.",
   },
 ];
 
@@ -48,9 +49,9 @@ export default function DevelopmentPage() {
           Software Development
         </h1>
         <p className="max-w-2xl text-muted-foreground">
-          I build modern full-stack products — web apps, desktop tools, and the
-          AI infrastructure behind them. Here&apos;s what I work with day to
-          day.
+          I build modern full-stack products: web apps, native desktop surfaces,
+          AI coaching systems, storefronts, admin portals, and the cloud
+          infrastructure behind them.
         </p>
       </section>
 

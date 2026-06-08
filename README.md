@@ -12,10 +12,10 @@ My personal portfolio site, showcasing the products I'm building and the work I 
 
 ## Projects Highlighted
 
-1. **Cornerman** — Real-time AI coaching for job interviews ([trycornerman.com](https://trycornerman.com/))
+1. **Cornerman** — Prep-aware AI coaching for job interviews ([trycornerman.com](https://trycornerman.com/))
 2. **Parallax** — Ambient meeting intelligence for sales teams ([tryparallax.app](https://tryparallax.app/))
-3. **Forge Logbooks** — Custom physical logbooks for serious lifters ([forgelogbooks.com](https://forgelogbooks.com/))
-4. **Forge Blog** — Open-source, agent-ready Next.js blog template
+3. **Forge Logbooks** — Print-on-demand training logbooks for lifters ([forgelogbooks.com](https://forgelogbooks.com/))
+4. **Forge Blog** — Open-source, agent-ready Next.js blog template ([github.com/coenhewes/forgeblog](https://github.com/coenhewes/forgeblog))
 
 ## Getting Started
 
@@ -30,10 +30,10 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Resume
 
-Drop your resume PDF at `public/resume.pdf` and the "Download Resume" button will serve it.
+The "Download Resume" button serves `public/resume.pdf`.
 
 ## Contact
 
-Coen Hewes — coenhewes@proton.me
+Coen Hewes — coenhewes@outlook.com
 
 Project link: [github.com/coenhewes/public-portfolio](https://github.com/coenhewes/public-portfolio)

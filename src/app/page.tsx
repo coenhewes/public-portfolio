@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "../components/ui/button";
 import { FeaturedProjectCard, ProjectCard } from "../components/project-card";
 import { projects } from "../data/projects";
+import { site, stack } from "../data/site";
 
 const experience = [
   {
@@ -30,19 +31,25 @@ const experience = [
 
 export default function HomePage() {
   return (
-    <main className="mx-auto flex min-h-screen max-w-6xl flex-col px-6 pb-24 pt-28">
+    <main className="mx-auto flex min-h-screen max-w-6xl flex-col px-6 pb-16 pt-28">
       <section className="mb-16 grid gap-8 border-b border-border pb-14 lg:grid-cols-[1.3fr_0.7fr] lg:items-end">
         <div>
           <p className="mb-3 text-sm font-medium text-muted-foreground">
-            Melbourne, VIC · AI products, SaaS platforms, technical systems
+            {site.location} · AI products, SaaS platforms, technical systems
           </p>
-          <h1 className="mb-5 max-w-3xl text-4xl font-bold tracking-tight sm:text-6xl">
-            Coen Hewes builds practical AI products from messy workflows.
+          <h1 className="mb-3 max-w-3xl text-4xl font-bold tracking-tight sm:text-6xl">
+            {site.name}
           </h1>
-          <p className="mb-7 max-w-2xl text-base leading-relaxed text-muted-foreground">
+          <p className="mb-5 max-w-3xl text-4xl italic tracking-tight text-foreground/90 sm:text-5xl">
+            {site.tagline}
+          </p>
+          <p className="mb-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
             I am a self-taught developer and technical sales executive building
             AI-powered applications and modern web platforms with Next.js,
             React, Python, FastAPI, Vertex AI, and production SaaS tooling.
+          </p>
+          <p className="mb-7 max-w-2xl text-sm font-medium text-foreground/80">
+            {site.lookingFor}
           </p>
           <div className="flex flex-wrap gap-3">
             <Button asChild>
@@ -55,7 +62,16 @@ export default function HomePage() {
               </Link>
             </Button>
             <Button asChild variant="outline">
-              <Link href="mailto:coenhewes@outlook.com">Get in touch</Link>
+              <Link href={`mailto:${site.email}`}>Get in touch</Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link
+                href={site.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </Link>
             </Button>
           </div>
         </div>
@@ -63,7 +79,7 @@ export default function HomePage() {
           {[
             ["8+", "years in SaaS, data, and analytics"],
             ["4", "production portfolio projects"],
-            ["A$185K", "largest outbound ARR deal closed"],
+            ["3x", "Presidents Club winner"],
           ].map(([value, label]) => (
             <div
               key={value}
@@ -80,12 +96,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mb-16">
+      <section id="projects" className="mb-16 scroll-mt-28">
         <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
           <h2 className="text-2xl font-semibold tracking-tight">Projects</h2>
           <p className="text-sm text-muted-foreground">
-            Parallax leads the portfolio; Forge Blog is the only open-source
-            repo.
+            Shipped products, not prototypes
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
@@ -99,7 +114,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mb-16">
+      <section id="experience" className="mb-16 scroll-mt-28">
         <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
           <h2 className="text-2xl font-semibold tracking-tight">Experience</h2>
           <p className="text-sm text-muted-foreground">
@@ -130,45 +145,25 @@ export default function HomePage() {
         </ol>
       </section>
 
-      <section>
-        <h2 className="mb-6 text-2xl font-semibold tracking-tight">Stack</h2>
+      <section id="stack" className="scroll-mt-28">
+        <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
+          <h2 className="text-2xl font-semibold tracking-tight">Stack</h2>
+          <Link
+            href="/dev"
+            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >
+            How I build →
+          </Link>
+        </div>
         <div className="flex flex-wrap gap-2">
-          <img
-            src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"
-            alt="Python"
-          />
-          <img
-            src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white"
-            alt="TypeScript"
-          />
-          <img
-            src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"
-            alt="React"
-          />
-          <img
-            src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white"
-            alt="Next.js"
-          />
-          <img
-            src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white"
-            alt="TailwindCSS"
-          />
-          <img
-            src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white"
-            alt="PostgreSQL"
-          />
-          <img
-            src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"
-            alt="FastAPI"
-          />
-          <img
-            src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"
-            alt="Vercel"
-          />
-          <img
-            src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"
-            alt="Git"
-          />
+          {stack.map((tech) => (
+            <span
+              key={tech}
+              className="rounded-md border border-border bg-card/80 px-3 py-1.5 font-mono text-sm text-muted-foreground"
+            >
+              {tech}
+            </span>
+          ))}
         </div>
       </section>
     </main>

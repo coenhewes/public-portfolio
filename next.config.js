@@ -8,10 +8,6 @@ await import("./src/env.js");
 const config = {
   images: {
     dangerouslyAllowSVG: true,
-    remotePatterns: [
-      {hostname: "img.shields.io",
-      }
-    ],
   },
   typescript: {
     ignoreBuildErrors: true,

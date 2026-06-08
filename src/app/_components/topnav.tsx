@@ -6,6 +6,7 @@ import Link from "next/link";
 import { cn } from "../../lib/utils";
 import { Icons } from "../../components/icons";
 import { projects } from "../../data/projects";
+import { site } from "../../data/site";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -24,25 +25,31 @@ export function NavigationMenuDemo() {
           <NavigationMenuTrigger>About</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
+              <li className="row-span-4">
                 <NavigationMenuLink asChild>
-                  <a
+                  <Link
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                     href="/"
                   >
                     <Icons.logo className="h-6 w-6" />
                     <div className="mb-2 mt-4 text-lg font-medium">
-                      Coen Hewes
+                      {site.name}
                     </div>
                     <p className="text-sm leading-tight text-muted-foreground">
                       I build AI-powered applications, SaaS platforms, and
                       technical systems.
                     </p>
-                  </a>
+                  </Link>
                 </NavigationMenuLink>
               </li>
+              <ListItem href="/#projects" title="Projects">
+                Shipped products and live platforms.
+              </ListItem>
+              <ListItem href="/#experience" title="Experience">
+                Enterprise SaaS, discovery, and execution.
+              </ListItem>
               <ListItem href="/dev" title="Software Development">
-                Turning ideas into reality.
+                How I build end to end.
               </ListItem>
             </ul>
           </NavigationMenuContent>
@@ -66,18 +73,27 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="mailto:coenhewes@outlook.com" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Contact Me
-            </NavigationMenuLink>
-          </Link>
+          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+            <Link href={`mailto:${site.email}`}>Contact</Link>
+          </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href="https://github.com/coenhewes/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Github
-            </NavigationMenuLink>
-          </Link>
+          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+            <Link
+              href={site.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+            <Link href={site.github} target="_blank" rel="noopener noreferrer">
+              GitHub
+            </Link>
+          </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
@@ -86,7 +102,7 @@ export function NavigationMenuDemo() {
 
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
+  React.ComponentPropsWithoutRef<"a"> & { title: string }
 >(({ className, title, children, ...props }, ref) => {
   return (
     <li>

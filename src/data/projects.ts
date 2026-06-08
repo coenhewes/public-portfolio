@@ -7,6 +7,8 @@ export type Project = {
   stack: string[];
   openSource?: boolean;
   featured?: boolean;
+  accent: string;
+  impact?: string[];
   highlights?: { title: string; description: string }[];
 };
 
@@ -14,7 +16,6 @@ export const projects: Project[] = [
   {
     title: "Parallax",
     href: "https://tryparallax.app/",
-    repo: "https://github.com/coenhewes/parallax",
     tagline: "Ambient meeting intelligence for sales teams.",
     description:
       "A multi-surface sales coaching platform with a native Swift macOS client, Command web portal, Chrome extension prototype, Zoom App sidebar, and meeting-bot prototype. I fine-tuned a Qwen model with LoRA adapters on Google Cloud Vertex AI to specialize it for sales methodology coaching, including MEDDICC and Triangle Selling, and deployed it as a production GCP endpoint.",
@@ -26,13 +27,18 @@ export const projects: Project[] = [
       "React 19",
       "Zoom Apps SDK",
       "Deepgram",
-      "MiniMax M2.7",
       "Qwen",
       "LoRA",
       "Vertex AI",
       "GCP",
       "Firebase",
       "PostHog",
+    ],
+    accent: "from-violet-500/20 via-fuchsia-500/10 to-transparent",
+    impact: [
+      "Multi-surface production platform",
+      "Custom fine-tuned LLM on Vertex AI",
+      "Native macOS + web + Zoom integrations",
     ],
     featured: true,
     highlights: [
@@ -56,7 +62,6 @@ export const projects: Project[] = [
   {
     title: "Cornerman",
     href: "https://trycornerman.com/",
-    repo: "https://github.com/coenhewes/cornerman",
     tagline: "Prep-aware AI coaching for job interviews.",
     description:
       "A web SaaS product for candidates to upload a resume and job description, generate a personalized prep plan, run AI practice interviews, and use private live coaching during real interviews. The active codebase is a Next.js frontend with a FastAPI backend, WebSocket sessions, Clerk auth, Stripe billing, Postgres persistence, and Deepgram-powered transcription.",
@@ -66,11 +71,17 @@ export const projects: Project[] = [
       "FastAPI",
       "WebSockets",
       "Deepgram",
-      "MiniMax M2.7",
+      "Vercel AI SDK",
       "Postgres",
       "Clerk",
       "Stripe",
       "Render",
+    ],
+    accent: "from-sky-500/20 via-cyan-500/10 to-transparent",
+    impact: [
+      "Full SaaS with auth, billing, and subscriptions",
+      "Real-time WebSocket coaching sessions",
+      "End-to-end prep-to-review workflow",
     ],
     highlights: [
       {
@@ -93,7 +104,6 @@ export const projects: Project[] = [
   {
     title: "Forge Logbooks",
     href: "https://forgelogbooks.com/",
-    repo: "https://github.com/coenhewes/logbookforgeprod",
     tagline: "Print-on-demand training logbooks for serious lifters.",
     description:
       "A production storefront for custom print-on-demand training logbooks. It powers the live site, catalogue, customizer, cart, Stripe checkout, Lulu print pipeline, generated PDFs, customer dashboard, SEO blog, admin tooling, support flows, and transactional/marketing email.",
@@ -112,6 +122,29 @@ export const projects: Project[] = [
       "Klaviyo",
       "Zustand",
     ],
+    accent: "from-amber-500/20 via-orange-500/10 to-transparent",
+    impact: [
+      "Live storefront processing real payments",
+      "Automated PDF generation and print fulfillment",
+      "Admin, support, and marketing automation",
+    ],
+    highlights: [
+      {
+        title: "Customizer",
+        description:
+          "Customers design training logbooks with live previews before checkout.",
+      },
+      {
+        title: "Print pipeline",
+        description:
+          "Stripe checkout, Lulu Print API integration, and generated PDFs handle fulfillment end to end.",
+      },
+      {
+        title: "Operations stack",
+        description:
+          "Admin tooling, customer dashboard, support flows, and transactional email keep the business running.",
+      },
+    ],
   },
   {
     title: "Forge Blog",
@@ -129,6 +162,29 @@ export const projects: Project[] = [
       "Vercel",
       "JSON-LD",
     ],
+    accent: "from-emerald-500/20 via-teal-500/10 to-transparent",
+    impact: [
+      "Open-source template with agent skill layer",
+      "Scheduled publishing via GitHub Actions",
+      "JSON-LD and SEO-ready out of the box",
+    ],
     openSource: true,
+    highlights: [
+      {
+        title: "Agent skill layer",
+        description:
+          "/skill.md and /skill.json let LLM agents write and schedule posts autonomously.",
+      },
+      {
+        title: "Scheduled publishing",
+        description:
+          "Future-dated posts go live automatically on daily rebuilds.",
+      },
+      {
+        title: "Single-file content",
+        description:
+          "Posts live in one TypeScript file for simple version control and fast iteration.",
+      },
+    ],
   },
 ];

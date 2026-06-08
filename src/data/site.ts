@@ -1,6 +1,6 @@
 export const site = {
   name: "Coen Hewes",
-  title: "Coen Hewes — AI products, SaaS platforms, technical systems",
+  title: "Coen Hewes | AI products, SaaS platforms, technical systems",
   description:
     "Self-taught developer and technical sales executive building AI-powered applications with Next.js, React, Python, FastAPI, and Vertex AI. Shipped Parallax, Cornerman, Forge Logbooks, and more.",
   tagline: "Building practical AI products from messy workflows.",

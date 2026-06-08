@@ -28,7 +28,7 @@ const specialties = [
   {
     title: "Tailwind CSS",
     description:
-      "Responsive, accessible, design-system-friendly interfaces — fast.",
+      "Responsive, accessible, design-system-friendly interfaces, fast.",
   },
   {
     title: "SQL & Postgres",

@@ -12,6 +12,48 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "Parallax",
+    href: "https://tryparallax.app/",
+    repo: "https://github.com/coenhewes/parallax",
+    tagline: "Ambient meeting intelligence for sales teams.",
+    description:
+      "A multi-surface sales coaching platform with a native Swift macOS client, Command web portal, Chrome extension prototype, Zoom App sidebar, and meeting-bot prototype. I fine-tuned a Qwen model with LoRA adapters on Google Cloud Vertex AI to specialize it for sales methodology coaching, including MEDDICC and Triangle Selling, and deployed it as a production GCP endpoint.",
+    stack: [
+      "Swift 6",
+      "macOS",
+      "FastAPI",
+      "Next.js 16",
+      "React 19",
+      "Zoom Apps SDK",
+      "Deepgram",
+      "MiniMax M2.7",
+      "Qwen",
+      "LoRA",
+      "Vertex AI",
+      "GCP",
+      "Firebase",
+      "PostHog",
+    ],
+    featured: true,
+    highlights: [
+      {
+        title: "Native client",
+        description:
+          "Swift macOS app handles live coaching, transcription, overlay UI, training sessions, and Command sync.",
+      },
+      {
+        title: "Fine-tuned model",
+        description:
+          "Qwen fine-tuned with LoRA adapters on Vertex AI for MEDDICC and Triangle Selling coaching.",
+      },
+      {
+        title: "Parallax Command",
+        description:
+          "FastAPI backend and Next.js portal support live sessions, team analytics, and manager coaching workflows.",
+      },
+    ],
+  },
+  {
     title: "Cornerman",
     href: "https://trycornerman.com/",
     repo: "https://github.com/coenhewes/cornerman",
@@ -30,7 +72,6 @@ export const projects: Project[] = [
       "Stripe",
       "Render",
     ],
-    featured: true,
     highlights: [
       {
         title: "Personalized prep",
@@ -46,44 +87,6 @@ export const projects: Project[] = [
         title: "Review loop",
         description:
           "Session reviews turn transcripts into summaries, suggestions, follow-up recommendations, and practice steps.",
-      },
-    ],
-  },
-  {
-    title: "Parallax",
-    href: "https://tryparallax.app/",
-    repo: "https://github.com/coenhewes/parallax",
-    tagline: "Ambient meeting intelligence for sales teams.",
-    description:
-      "A multi-surface sales coaching platform with a native Swift macOS client for live coaching, a Chrome extension prototype for Google Meet, a Zoom App sidebar prototype, a visible meeting-bot prototype, and Parallax Command for team analytics and coaching signals.",
-    stack: [
-      "Swift 6",
-      "macOS",
-      "FastAPI",
-      "Next.js 16",
-      "React 19",
-      "Zoom Apps SDK",
-      "Deepgram",
-      "MiniMax M2.7",
-      "Firebase",
-      "PostHog",
-    ],
-    featured: true,
-    highlights: [
-      {
-        title: "Native client",
-        description:
-          "Swift macOS app handles live coaching, transcription, overlay UI, training sessions, and Command sync.",
-      },
-      {
-        title: "Meeting surfaces",
-        description:
-          "Prototypes cover Chrome in-tab coaching, Zoom sidebar coaching, and a visible Google Meet bot.",
-      },
-      {
-        title: "Parallax Command",
-        description:
-          "FastAPI backend and Next.js portal support live sessions, team analytics, and manager coaching workflows.",
       },
     ],
   },

@@ -1,12 +1,15 @@
 import "~/styles/globals.css";
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
-import { NavigationMenuDemo } from "./_components/topnav"
+import { NavigationMenuDemo } from "./_components/topnav";
 
 export const metadata: Metadata = {
   title: "Coen Hewes",
   description: "Portfolio of Coen Hewes",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  icons: [
+    { rel: "icon", url: "/favicon.svg", type: "image/svg+xml" },
+    { rel: "shortcut icon", url: "/favicon.ico" },
+  ],
 };
 
 export default function RootLayout({

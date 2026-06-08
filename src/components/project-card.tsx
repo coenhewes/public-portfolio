@@ -8,8 +8,8 @@ export function ProjectCard({ project }: { project: Project }) {
   return (
     <div
       className={cn(
-        "group relative flex flex-col justify-between rounded-lg border border-border bg-card p-5 text-card-foreground transition-colors",
-        "hover:border-primary/60 hover:bg-accent/40",
+        "group relative flex min-h-[300px] flex-col justify-between overflow-hidden rounded-lg border border-border/80 bg-card/80 p-5 text-card-foreground shadow-sm transition-colors",
+        "hover:border-primary/50 hover:bg-accent/30",
       )}
     >
       <Link
@@ -20,8 +20,15 @@ export function ProjectCard({ project }: { project: Project }) {
         aria-label={`Visit ${project.title}`}
       />
       <div className="relative">
-        <div className="mb-2 flex items-center justify-between gap-2">
-          <h3 className="text-lg font-semibold leading-none">
+        <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-md border border-border bg-background text-sm font-semibold">
+          {project.title
+            .split(" ")
+            .map((part) => part[0])
+            .join("")
+            .slice(0, 2)}
+        </div>
+        <div className="mb-2 flex items-start justify-between gap-2">
+          <h3 className="text-lg font-semibold leading-tight">
             {project.title}
           </h3>
           <ArrowUpRight className="h-4 w-4 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
@@ -49,15 +56,16 @@ export function ProjectCard({ project }: { project: Project }) {
             </span>
           ))}
         </div>
-        {project.repo && (
+        {project.openSource && project.repo && (
           <Link
             href={project.repo}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-md text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+            className="relative z-10 inline-flex shrink-0 items-center gap-1.5 rounded-md border border-border px-2.5 py-1.5 text-xs font-medium text-foreground hover:bg-accent"
             aria-label={`${project.title} source on GitHub`}
           >
             <Github className="h-4 w-4" />
+            Source
           </Link>
         )}
       </div>
@@ -67,11 +75,12 @@ export function ProjectCard({ project }: { project: Project }) {
 
 export function FeaturedProjectCard({ project }: { project: Project }) {
   return (
-    <div className="relative flex flex-col gap-6 rounded-lg border border-primary/40 bg-card p-6 text-card-foreground sm:col-span-2 sm:p-8">
+    <div className="relative flex flex-col gap-6 overflow-hidden rounded-lg border border-primary/30 bg-card/90 p-6 text-card-foreground shadow-sm sm:col-span-2 sm:p-8">
+      <div className="absolute right-0 top-0 hidden h-full w-1/3 border-l border-border/40 bg-muted/20 sm:block" />
       <div className="flex flex-col gap-2">
         <div className="flex flex-wrap items-center gap-2">
           <span className="rounded bg-primary/15 px-2 py-0.5 text-[10px] uppercase tracking-wide text-primary">
-            Featured
+            Lead project
           </span>
           {project.openSource && (
             <span className="rounded bg-secondary px-1.5 py-0.5 text-[10px] uppercase tracking-wide text-secondary-foreground">
@@ -79,8 +88,8 @@ export function FeaturedProjectCard({ project }: { project: Project }) {
             </span>
           )}
         </div>
-        <div className="flex flex-wrap items-start justify-between gap-3">
-          <div>
+        <div className="relative flex flex-wrap items-start justify-between gap-3">
+          <div className="max-w-2xl">
             <h3 className="text-2xl font-semibold tracking-tight">
               {project.title}
             </h3>
@@ -98,7 +107,7 @@ export function FeaturedProjectCard({ project }: { project: Project }) {
               Visit site
               <ArrowUpRight className="h-3.5 w-3.5" />
             </Link>
-            {project.repo && (
+            {project.openSource && project.repo && (
               <Link
                 href={project.repo}
                 target="_blank"
@@ -113,16 +122,16 @@ export function FeaturedProjectCard({ project }: { project: Project }) {
         </div>
       </div>
 
-      <p className="max-w-3xl text-sm leading-relaxed text-muted-foreground">
+      <p className="relative max-w-3xl text-sm leading-relaxed text-muted-foreground">
         {project.description}
       </p>
 
       {project.highlights && (
-        <div className="grid gap-4 sm:grid-cols-3">
+        <div className="relative grid gap-4 sm:grid-cols-3">
           {project.highlights.map((h) => (
             <div
               key={h.title}
-              className="rounded-md border border-border bg-background/40 p-4"
+              className="rounded-md border border-border bg-background/60 p-4"
             >
               <div className="mb-1 text-sm font-semibold">{h.title}</div>
               <p className="text-xs leading-relaxed text-muted-foreground">
@@ -133,7 +142,7 @@ export function FeaturedProjectCard({ project }: { project: Project }) {
         </div>
       )}
 
-      <div className="flex flex-wrap gap-1.5">
+      <div className="relative flex flex-wrap gap-1.5">
         {project.stack.map((tech) => (
           <span
             key={tech}

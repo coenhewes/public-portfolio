@@ -12,8 +12,8 @@ My personal portfolio site, showcasing the products I'm building and the work I 
 
 ## Projects Highlighted
 
-1. **Cornerman** — Prep-aware AI coaching for job interviews ([trycornerman.com](https://trycornerman.com/))
-2. **Parallax** — Ambient meeting intelligence for sales teams ([tryparallax.app](https://tryparallax.app/))
+1. **Parallax** — Ambient meeting intelligence for sales teams ([tryparallax.app](https://tryparallax.app/))
+2. **Cornerman** — Prep-aware AI coaching for job interviews ([trycornerman.com](https://trycornerman.com/))
 3. **Forge Logbooks** — Print-on-demand training logbooks for lifters ([forgelogbooks.com](https://forgelogbooks.com/))
 4. **Forge Blog** — Open-source, agent-ready Next.js blog template ([github.com/coenhewes/forgeblog](https://github.com/coenhewes/forgeblog))
 

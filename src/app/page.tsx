@@ -2,32 +2,9 @@ import Link from "next/link";
 
 import { Button } from "../components/ui/button";
 import { FeaturedProjectCard, ProjectCard } from "../components/project-card";
+import { experience } from "../data/experience";
 import { projects } from "../data/projects";
 import { site, stack } from "../data/site";
-
-const experience = [
-  {
-    role: "Senior Enterprise Account Executive",
-    company: "Branch",
-    period: "Nov 2024 - Feb 2026",
-    summary:
-      "Partnered with Solution Architects on technical POCs, led discovery and solution design for complex accounts, and worked on mobile attribution and deep linking programs for enterprise teams.",
-  },
-  {
-    role: "Enterprise Account Executive",
-    company: "Supermetrics",
-    period: "Oct 2022 - Oct 2024",
-    summary:
-      "Mapped enterprise data requirements across 150+ marketing data sources, exceeded $300K quarterly ARR targets across 8 consecutive quarters, and closed a company-record A$185K ARR outbound deal.",
-  },
-  {
-    role: "Account Executive, JAPAC",
-    company: "Brandwatch",
-    period: "Jan 2018 - Aug 2021",
-    summary:
-      "Sold AI/ML-driven consumer intelligence across Japan and APAC, consistently exceeded $200K quarterly ARR targets, and achieved Presidents Club.",
-  },
-];
 
 export default function HomePage() {
   return (
@@ -137,9 +114,17 @@ export default function HomePage() {
                   {entry.period}
                 </span>
               </div>
-              <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                {entry.summary}
-              </p>
+              <ul className="mt-2 space-y-1.5">
+                {entry.bullets.map((bullet) => (
+                  <li
+                    key={bullet}
+                    className="flex items-start gap-2 text-sm leading-relaxed text-muted-foreground"
+                  >
+                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-muted-foreground/70" />
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
             </li>
           ))}
         </ol>
